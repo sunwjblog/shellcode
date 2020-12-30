@@ -14,7 +14,7 @@ function get_all_group
 
 	
 	
-	G_LIST=`sed -n '/\[GROUP_LIST\]/,/\[,*\]/p' $HOME_DIR/$CONFIG_FILE | egrep -v "(^$|\[.*\])"`
+	G_LIST=`sed -n '/\[GROUP_LIST\]/,/\[.*\]/p' $HOME_DIR/$CONFIG_FILE | egrep -v "(^$|\[.*\])"`
 
 	echo $G_LIST
 	
